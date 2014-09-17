@@ -4,7 +4,7 @@ request = Request('http://api.zappos.com/Search?term=boots&key=52ddafbe3ee659bad
 
 try:
 	response = urlopen(request)
-	kittens = response.read()
-	print kittens[559:1000]
+	plain_text = response.read()
+	print plain_text[559:1000]
 except URLError, e:
-    print 'No kittez. Got an error code:', e
+    print 'Got an error code:', e
